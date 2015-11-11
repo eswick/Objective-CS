@@ -44,7 +44,7 @@ The original implementation of a method can be called by using the `@orig` direc
 ```
 
 ### `super`
-`super` can be used inside a method just like it is used is a normal class implementation to call the superclass' implementation of a method.
+`super` can be used inside a method just like it is used in a normal class implementation to call the superclass' implementation of a method.
 
 ```
 @interface ExampleClass : NSObject
