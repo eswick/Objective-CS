@@ -1,4 +1,4 @@
-# The Objective-CS Language Specification Version 1
+# The Objective-CS Language Specification Version 1 Revision 1
 
 This document provides the specification for the Objective-CS language.
 
@@ -11,7 +11,10 @@ Objective-CS adds the following new features to Objective-C:
 - Method Hooking
 - Adding Methods at Runtime
 - Adding Properties at Runtime
+
+Other language features:
 - Direct Instance Variable Access
+- Hook Groups
 
 ## Method Hooking
 
@@ -144,6 +147,41 @@ Methods inside hook implementations have direct access to instance variables. Th
 }
 
 @end
+```
+
+## Hook Groups
+
+Hook implementations can be defined inside groups. A group is defined by the `@group` directive, followed by the group name. A group definition must end with the `@end` directive.
+
+By default, hook implementations inside groups are not initialized automatically at runtime. They must be manually initialized by using the `@init` directive. This is commonly done in the constructor.
+
+```
+
+@hook UIScreen
+
+- (CGRect)bounds { // Initialized automatically
+  return CGRectMake(0, 0, 100, 100);
+}
+
+@end
+
+@group SpringBoard
+@hook UIApplication
+
+- (void)applicationDidFinishLaunching:(id)application { // Initialized in the constructor
+  @orig(application);
+  NSLog(@"SpringBoard did finish launching!");
+}
+
+@end
+@end
+
+__attribute__((constructor))
+static void ctor() {
+  if ([[[NSBundle mainBundle] bundleIdentifier] isEqualToString:@"com.apple.springboard"]) {
+    @init(SpringBoard); // Initialize the SpringBoard group
+  }
+}
 ```
 
 # Final Notes
