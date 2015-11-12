@@ -156,7 +156,6 @@ Hook implementations can be defined inside groups. A group is defined by the `@g
 By default, hook implementations inside groups are not initialized automatically at runtime. They must be manually initialized by using the `@init` directive. This is commonly done in the constructor.
 
 ```
-
 @hook UIScreen
 
 - (CGRect)bounds { // Initialized automatically
