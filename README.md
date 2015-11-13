@@ -4,7 +4,7 @@ This document provides the specification for the Objective-CS language.
 
 Objective-CS was inspired by the [Logos](https://github.com/DHowett/theos/blob/master/bin/logos.pl) preprocessor originally by [Dustin Howett](http://github.com/DHowett). Objective-CS improves upon Logos and dramatically increases the simplicity and readability of tweaks and other programs.
 
-Objective-CS is a direct superset of Objective-C, therefore all code valid in Objective-C is valid in Objective-CS. It is also possible to write 'Objective-CS++' code, `Objective-CS++' being a direct superset of Objective-C++ and Objective-CS.
+Objective-CS is a direct superset of Objective-C, therefore all code valid in Objective-C is valid in Objective-CS. It is also possible to write 'Objective-CS++' code, Objective-CS++ being a direct superset of Objective-C++ and Objective-CS.
 
 Objective-CS adds the following new features to Objective-C:
 
