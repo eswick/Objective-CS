@@ -173,7 +173,7 @@ By default, hook implementations inside groups are not initialized automatically
 }
 
 @end
-@end
+@endgroup
 
 __attribute__((constructor))
 static void ctor() {
