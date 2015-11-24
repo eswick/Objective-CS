@@ -1,4 +1,4 @@
-# The Objective-CS Language Specification Version 1 Revision 1
+# The Objective-CS Language Specification Version 1 Revision 2
 
 This document provides the specification for the Objective-CS language.
 
@@ -151,7 +151,7 @@ Methods inside hook implementations have direct access to instance variables. Th
 
 ## Hook Groups
 
-Hook implementations can be defined inside groups. A group is defined by the `@group` directive, followed by the group name. A group definition must end with the `@end` directive.
+Hook implementations can be defined inside groups. A group is defined by the `@group` directive, followed by the group name. A group definition must end with the `@endgroup` directive.
 
 By default, hook implementations inside groups are not initialized automatically at runtime. They must be manually initialized by using the `@init` directive. This is commonly done in the constructor.
 
