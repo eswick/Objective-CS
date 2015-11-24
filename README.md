@@ -185,4 +185,4 @@ static void ctor() {
 
 # Final Notes
 
-As you can see, Objective-CS is a *huge* improvement over the Logos preprocessor. By extending the compiler directly instead of using a preprocessor, we gain some extremely powerful features. The language will continue to evolve and more features will be added over time. A compiler for Objective-CS, titled `clang-objcs` is in the process of being developed and will be available soon!
+As you can see, Objective-CS is a *huge* improvement over the Logos preprocessor. By extending the compiler directly instead of using a preprocessor, we gain some extremely powerful features. The language will continue to evolve and more features will be added over time. A compiler for Objective-CS, [clang-objcs](http://github.com/eswick/clang-objcs), is in the process of being developed and a stable release will be available soon soon!
